@@ -104,13 +104,13 @@
                     </li>
                     <li class="nav-item">
 
-                        <a class="nav-link d-inline" href="https://t.me/livelongevity" target="_blank">
+                        <a class="nav-link d-inline" href="https://t.me/IslomFargniy" target="_blank">
                             <i class="fa fa-telegram d-inline"></i>
                         </a>
-                        <a class="nav-link d-inline" href="https://t.me/livelongevity" target="_blank">
+                        <a class="nav-link d-inline" href="https://t.me/IslomFargniy" target="_blank">
                             <i class="fa fa-facebook"></i>
                         </a>
-                        <a class="nav-link d-inline" href="https://t.me/livelongevity" target="_blank">
+                        <a class="nav-link d-inline" href="https://t.me/IslomFargniy" target="_blank">
                             <i class="fa fa-instagram"></i>
                         </a>
                     </li>
