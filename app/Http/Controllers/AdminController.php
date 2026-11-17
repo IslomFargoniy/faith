@@ -132,10 +132,14 @@ class AdminController extends Controller
      */
     public function update(Request $request, $id)
     {
+        // Changing one's own password needs the current one: a stolen session must not be enough to take the
+        // account over. A super admin / admin resetting ANOTHER user's password does not need it.
+        $isSelf = Auth::id() == $id;
         $request->validate([
             'name'=>'required',
             'email'=>'required',
             'password'=>'required',
+            'current_password' => $isSelf && !empty(Auth::user()->password) ? ['required', 'current_password'] : ['nullable'],
 //            'role'=>'required',
         ]);
 

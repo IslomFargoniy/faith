@@ -19,6 +19,15 @@
                     <label for="exampleInputEmail1">Email address</label>
                     <input name="email" type="email" class="form-control" value="{{ $admin->email }}" id="exampleInputEmail1" placeholder="Enter email">
                 </div>
+                @if (Auth::user()->password)
+                <div class="form-group">
+                    <label for="currentPassword">Current password</label>
+                    <input name="current_password" type="password" class="form-control @error('current_password') is-invalid @enderror" id="currentPassword" placeholder="Current Password" autocomplete="current-password" required>
+                    @error('current_password')
+                        <span class="invalid-feedback d-block">{{ $message }}</span>
+                    @enderror
+                </div>
+                @endif
                 <div class="form-group">
                     <label for="exampleInputPassword1">Password</label>
                     <input name="password" type="text" class="form-control" id="exampleInputPassword1" placeholder="New Password" required>
